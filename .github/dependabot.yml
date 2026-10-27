@@ -1,0 +1,23 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      timezone: Asia/Karachi
+    open-pull-requests-limit: 5
+    # One PR for all small, low-risk updates; major updates get their own PR.
+    groups:
+      minor-and-patch:
+        update-types: [minor, patch]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      timezone: Asia/Karachi
+    groups:
+      github-actions:
+        patterns: ["*"]
