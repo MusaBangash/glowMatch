@@ -1,0 +1,9 @@
+# Store all text files with LF line endings so Windows, CI, and Vercel match.
+* text=auto eol=lf
+
+# Binary files: never touch line endings.
+*.ico binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
